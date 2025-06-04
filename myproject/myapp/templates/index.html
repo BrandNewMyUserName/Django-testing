@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>
+    {% if "Bob" not in name and name %}
+        <p>Nice to meet you, {{ name }}.</p>
+    {% else %}
+        <p>Hello, stranger!</p>
+    {% endif %}
+</body>
+</html>
