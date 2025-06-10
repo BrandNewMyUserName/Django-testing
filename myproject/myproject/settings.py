@@ -38,7 +38,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-import os
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -66,6 +65,7 @@ LOGGING = {
 }
 
 INSTALLED_APPS = [
+    'django_prometheus',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
