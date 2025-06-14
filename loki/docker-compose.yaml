@@ -1,9 +1,13 @@
 version: "3.3"
 
+# TODO Change absolute paths to relative paths
+# https://grok.com/chat/ffe86475-2cf4-456e-94b2-42442b481880
+# Updated to version: "3.8" for better compatibility.
 networks:
   loki:
 
 services:
+
   loki:
     image: grafana/loki:latest
     ports:
@@ -57,5 +61,16 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
-    networks:
-      - loki
+    # networks:
+    #   - loki
+    # extra_hosts:
+    #   - "host.docker.internal:host-gateway"
+    # network_mode: host
+    # command:
+    #   - '--config.file=/etc/prometheus/prometheus.yml'
+    #   - '--web.listen-address=:9090'
+    #   - '--web.enable-lifecycle'
+    #   - '--storage.tsdb.path=/prometheus'
+    #   - '--storage.tsdb.retention.time=15d'
+    #   - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+    #   - '--web.console.templates=/usr/share/prometheus/consoles'

@@ -22,6 +22,7 @@ def trigger_error(request):
 
 
 urlpatterns = [
+    path('metrics/', include('django_prometheus.urls')),
     path('sentry-debug/', trigger_error),
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),

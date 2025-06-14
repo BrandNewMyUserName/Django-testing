@@ -1,5 +1,5 @@
 Install script before running program
-pip install "json"
+pip install python-json-logger
 
 
 Installing docker Loki and Promtail

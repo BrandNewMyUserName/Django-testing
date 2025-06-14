@@ -1,1 +1,5 @@
+django
 django-prometheus
+gunicorn
+sentry_sdk
+python-json-logger
